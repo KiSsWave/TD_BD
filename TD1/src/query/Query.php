@@ -18,4 +18,13 @@ class Query{
         $this->args[] = $val;
         return $this;
     }
+    public function get() : Array {
+        $this->sql = 'select '. $this->fields . ' from ' . $this->table_sql;
+        if($this->where){
+            $this->sql = $this->sql . ' ' . $this->where;
+        }
+        $stmt = $pdo->prepare($this->sql);
+        $stmt->execute($this->args);
+        return $stmt->fectAll(\PDO::FETCH_ASSOC);
+    }
 }
