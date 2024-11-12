@@ -13,6 +13,11 @@ class Query{
         $query->table_sql= $table;
         return $query;
     }
+
+    public function select ( array $fields) : Query{
+        $this->fields = implode(',',$fields);
+        return $this;
+    }
     public function where(string $col, string $op, mixed $val): Query {
         $this->where = "WHERE $col $op ?";
         $this->args[] = $val;
