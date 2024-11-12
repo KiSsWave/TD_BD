@@ -25,9 +25,10 @@ class Query{
     }
     public function get() : Array {
         $this->sql = 'select '. $this->fields . ' from ' . $this->table_sql;
-        if($this->where){
+        if(!is-null($this->where)){
             $this->sql = $this->sql . ' ' . $this->where;
         }
+        $pdo connectionfactory::getconnection();
         $stmt = $pdo->prepare($this->sql);
         $stmt->execute($this->args);
         return $stmt->fectAll(\PDO::FETCH_ASSOC);
@@ -37,5 +38,8 @@ class Query{
         $this->sql = $this->sql . ' ' . $this->where;
         $stmt = $pdo->prepare($this->sql);
         $stmt->execute($this->args);
+    }
+    public function insert( array $fields) : void{ 
+        $this->sql = 'INSERT INTO ' . $this->table_sql . ' (' . $this->fields . ') VALUES ';
     }
 }
