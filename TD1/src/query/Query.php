@@ -32,4 +32,10 @@ class Query{
         $stmt->execute($this->args);
         return $stmt->fectAll(\PDO::FETCH_ASSOC);
     }
+    public function delete() : void {
+        $this->sql = 'DELETE FROM ' . $this->table_sql;
+        $this->sql = $this->sql . ' ' . $this->where;
+        $stmt = $pdo->prepare($this->sql);
+        $stmt->execute($this->args);
+    }
 }
