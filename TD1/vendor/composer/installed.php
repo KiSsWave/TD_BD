@@ -3,7 +3,7 @@
         'name' => 'iutnc/hellokant',
         'pretty_version' => 'dev-main',
         'version' => 'dev-main',
-        'reference' => 'c73efd974940dcf78de1f32dcb0f398f31566d81',
+        'reference' => '569ff900e02fdf035e7062b7520c5dd0df34612a',
         'type' => 'project',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
@@ -112,7 +112,7 @@
         'iutnc/hellokant' => array(
             'pretty_version' => 'dev-main',
             'version' => 'dev-main',
-            'reference' => 'c73efd974940dcf78de1f32dcb0f398f31566d81',
+            'reference' => '569ff900e02fdf035e7062b7520c5dd0df34612a',
             'type' => 'project',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),

@@ -1,12 +1,10 @@
 <?php
 
+require_once __DIR__ . '/vendor/autoload.php';
 
 use iutnc\hellokant\database\ConnectionFactory;
 
-$conf = parse_ini_file('conf/db.conf.ini');
+$conf = parse_ini_file(__DIR__ . '/conf/db.conf.ini');
+$pdo = ConnectionFactory::makeConnection($conf);
 
 
-ConnectionFactory::makeConnection($conf);
-
-
-$pdo = ConnectionFactory::getConnection();
