@@ -44,4 +44,27 @@ abstract class Model
         $id = Query::table(static::$table)->insert($this->atts);
         $this->atts[static::$idColumn] = $id;
     }
+
+    public static function all(): array
+    {
+        $lignes = Query::table(static::$table)->get();
+        return array_map(fn($ligne) => new static($ligne), $lignes);
+    }
+
+
+    public static function find(mixed $critere, array $colonnes = ['*']): array
+    {
+        $query = Query::table(static::$table)->select($colonnes);
+
+
+        if (is_int($critere)) {
+            $query = $query->where(static::$idColumn, '=', $critere);
+        } elseif (is_array($critere)) {
+            [$col, $op, $val] = $critere;
+            $query = $query->where($col, $op, $val);
+        }
+
+        $rows = $query->get();
+        return array_map(fn($row) => new static($row), $rows);
+    }
 }
