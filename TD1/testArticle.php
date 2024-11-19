@@ -16,12 +16,12 @@ $article = new Article([
     'id_categ' => 1
 ]);
 
+$article->insert();
+echo "Article inséré avec l'ID : " . $article->id . "\n";
 
 $article->delete();
 echo "Article supprimé avec l'ID : " . $article->id . "\n";
 
-$article->insert();
-echo "Article inséré avec l'ID : " . $article->id . "\n";
 
 echo "Tous les articles :\n";
 $articles = Article::all();
@@ -31,7 +31,7 @@ foreach ($articles as $article) {
 
 
 echo "\nTrouver un article par ID :\n";
-$articleById = Article::find(27);
+$articleById = Article::find(1);
 foreach ($articleById as $article) {
     echo "ID: {$article->id}, Nom: {$article->nom}\n";
 }
