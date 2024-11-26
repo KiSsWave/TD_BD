@@ -3,8 +3,8 @@
 require_once __DIR__ . '/vendor/autoload.php';
 
 use iutnc\hellokant\database\ConnectionFactory;
-use iutnc\hellokant\model\Article;
-use iutnc\hellokant\model\Categorie;
+use iutnc\hellokant\entity\Article;
+use iutnc\hellokant\entity\Categorie;
 
 $conf = parse_ini_file(__DIR__ . '/conf/db.conf.ini');
 $pdo = ConnectionFactory::makeConnection($conf);

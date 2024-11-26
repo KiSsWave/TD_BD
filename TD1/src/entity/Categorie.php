@@ -1,6 +1,8 @@
 <?php
 
-namespace iutnc\hellokant\model;
+namespace iutnc\hellokant\entity;
+
+use iutnc\hellokant\model\Model;
 
 class Categorie extends Model
 {

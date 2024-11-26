@@ -12,13 +12,13 @@ class ConnectionFactory
     public static function makeConnection(array $conf): PDO
     {
         if (self::$pdoInstance === null) {
-
-            $dsn = "pgsql:host={$conf['host']};port={$conf['port']};dbname={$conf['dbname']}";
+            $dsn = "mysql:host={$conf['host']};port={$conf['port']};dbname={$conf['dbname']};charset=utf8";
             try {
                 self::$pdoInstance = new PDO(
                     $dsn,
                     $conf['username'],
                     $conf['password'],
+                    [PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION]
                 );
             } catch (PDOException $e) {
                 throw new PDOException("Erreur de connexion : " . $e->getMessage());
@@ -32,3 +32,4 @@ class ConnectionFactory
         return self::$pdoInstance;
     }
 }
+

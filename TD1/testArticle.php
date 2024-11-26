@@ -3,7 +3,7 @@
 require_once __DIR__ . '/vendor/autoload.php';
 
 use iutnc\hellokant\database\ConnectionFactory;
-use iutnc\hellokant\model\Article;
+use iutnc\hellokant\entity\Article;
 
 $conf = parse_ini_file(__DIR__ . '/conf/db.conf.ini');
 $pdo = ConnectionFactory::makeConnection($conf);
@@ -19,7 +19,11 @@ $article = new Article([
 $article->insert();
 echo "Article inséré avec l'ID : " . $article->id . "\n";
 
-$article->delete();
+try {
+    $article->delete();
+} catch (Exception $e) {
+
+}
 echo "Article supprimé avec l'ID : " . $article->id . "\n";
 
 

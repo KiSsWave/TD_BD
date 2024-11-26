@@ -77,7 +77,7 @@ abstract class Model
             ->where($cle_associe, '=', $valeur)
             ->get();
 
-        if(!empty($row)){
+        if($row){
             return new $model($row[0]);
         } else {
             return null;
