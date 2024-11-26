@@ -5,7 +5,7 @@ require_once __DIR__ . '/vendor/autoload.php';
 use iutnc\hellokant\database\ConnectionFactory;
 use iutnc\hellokant\entity\Article;
 
-$conf = parse_ini_file(__DIR__ . '/conf/db.conf.ini');
+$conf = parse_ini_file(__DIR__ . '/conf_td1/db.conf.ini');
 $pdo = ConnectionFactory::makeConnection($conf);
 
 

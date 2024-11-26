@@ -1,0 +1,26 @@
+version: '3.8'
+
+networks:
+  td2.net:
+    driver: bridge
+
+services:
+  mysql:
+    image: 'mysql:latest'
+    env_file: .env
+    ports:
+      - "3307:3306"
+    volumes:
+      - mysql_data:/var/lib/mysql
+    networks:
+      - td2.net
+
+  adminer:
+    image: adminer
+    ports:
+      - '8080:8080'
+    networks:
+      - td2.net
+
+volumes:
+  mysql_data:
