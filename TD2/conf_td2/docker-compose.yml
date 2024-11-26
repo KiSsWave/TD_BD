@@ -1,26 +1,26 @@
 version: '3.8'
 
 networks:
-  td2.net:
+  td1.net:
     driver: bridge
 
 services:
-  mysql:
-    image: 'mysql:latest'
+  postgres:
+    image: 'postgres:latest'
     env_file: .env
     ports:
-      - "3307:3306"
+      - "5432:5432"
     volumes:
-      - mysql_data:/var/lib/mysql
+      - postgres_data:/var/lib/postgresql/data
     networks:
-      - td2.net
+      - td1.net
 
   adminer:
     image: adminer
     ports:
       - '8080:8080'
     networks:
-      - td2.net
+      - td1.net
 
 volumes:
-  mysql_data:
+  postgres_data:
