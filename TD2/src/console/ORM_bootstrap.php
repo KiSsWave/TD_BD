@@ -8,7 +8,7 @@ use Doctrine\ORM\ORMSetup;
 $entity_path = [__DIR__ . '/../core/domain/entities/'];
 $isDevMode=false;
 
-$dbParams = parse_ini_file(__DIR__ . '/../../config/prati.ini');
+$dbParams = parse_ini_file(__DIR__ . '/../../conf_td2/db.conf.ini');
 
 $config = ORMSetup::createAttributeMetadataConfiguration($entity_path, $isDevMode);
 $connection = DriverManager::getConnection($dbParams,$config);
