@@ -37,6 +37,31 @@
       <path value="$PROJECT_DIR$/TD1/vendor/illuminate/database" />
       <path value="$PROJECT_DIR$/TD1/vendor/illuminate/contracts" />
       <path value="$PROJECT_DIR$/TD1/vendor/illuminate/support" />
+      <path value="$PROJECT_DIR$/TD2/vendor/doctrine/dbal" />
+      <path value="$PROJECT_DIR$/TD2/vendor/doctrine/event-manager" />
+      <path value="$PROJECT_DIR$/TD2/vendor/doctrine/persistence" />
+      <path value="$PROJECT_DIR$/TD2/vendor/doctrine/inflector" />
+      <path value="$PROJECT_DIR$/TD2/vendor/doctrine/orm" />
+      <path value="$PROJECT_DIR$/TD2/vendor/doctrine/deprecations" />
+      <path value="$PROJECT_DIR$/TD2/vendor/doctrine/lexer" />
+      <path value="$PROJECT_DIR$/TD2/vendor/symfony/console" />
+      <path value="$PROJECT_DIR$/TD2/vendor/symfony/deprecation-contracts" />
+      <path value="$PROJECT_DIR$/TD2/vendor/symfony/string" />
+      <path value="$PROJECT_DIR$/TD2/vendor/symfony/polyfill-ctype" />
+      <path value="$PROJECT_DIR$/TD2/vendor/symfony/service-contracts" />
+      <path value="$PROJECT_DIR$/TD2/vendor/symfony/polyfill-mbstring" />
+      <path value="$PROJECT_DIR$/TD2/vendor/symfony/polyfill-intl-normalizer" />
+      <path value="$PROJECT_DIR$/TD2/vendor/symfony/polyfill-intl-grapheme" />
+      <path value="$PROJECT_DIR$/TD2/vendor/symfony/polyfill-php80" />
+      <path value="$PROJECT_DIR$/TD2/vendor/symfony/yaml" />
+      <path value="$PROJECT_DIR$/TD2/vendor/composer" />
+      <path value="$PROJECT_DIR$/TD2/vendor/psr/container" />
+      <path value="$PROJECT_DIR$/TD2/vendor/psr/cache" />
+      <path value="$PROJECT_DIR$/TD2/vendor/psr/log" />
+      <path value="$PROJECT_DIR$/TD2/vendor/doctrine/cache" />
+      <path value="$PROJECT_DIR$/TD2/vendor/doctrine/common" />
+      <path value="$PROJECT_DIR$/TD2/vendor/doctrine/collections" />
+      <path value="$PROJECT_DIR$/TD2/vendor/doctrine/instantiator" />
     </include_path>
   </component>
   <component name="PhpProjectSharedConfiguration" php_language_level="8.2" />

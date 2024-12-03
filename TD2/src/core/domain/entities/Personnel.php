@@ -1,7 +1,6 @@
 <?php
 namespace iutnc\doktrine\core\domain\entities;
 
-use Cassandra\Uuid;
 use Doctrine\DBAL\Types\Types;
 use Doctrine\ORM\Mapping\Column;
 use Doctrine\ORM\Mapping\Entity;
@@ -14,8 +13,8 @@ use Doctrine\ORM\Mapping\Table;
 #[Table(name: "Personnel")]
 class Personnel{
 
-    #[ID]
-    #[Column(type: Types::GUID)]
+    #[Id]
+    #[Column(type: "uuid")]
     #[GeneratedValue(strategy: "UUID")]
     private string $id;
 
@@ -31,6 +30,11 @@ class Personnel{
 
     #[Column(name:"telephone", type: Types::STRING, length:24)]
     private string $telephone;
+
+    #[Column(name:"ville", type: Types::STRING, length: 48)]
+    private string $ville;
+
+
 
 
 
