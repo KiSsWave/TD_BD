@@ -21,7 +21,7 @@ class Type_Groupement{
         private string $typeLibelle;
 
         #[Column(type: "string", length: 255)]
-        private string $typeDesciption;
+        private string $typeDescription;
 
 
 }
