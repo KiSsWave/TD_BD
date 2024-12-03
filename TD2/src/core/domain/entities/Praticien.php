@@ -32,5 +32,13 @@ class Praticien
     #[Column(type: "string", length: 50)]
     private string $ville;
 
+    #[ManyToOne(targetEntity: Specialite::class)]
+    #[JoinColumn(name: "specialite_id", referencedColumnName: "id", nullable: false)]
+    private Specialite $specialite;
+
+    #[ManyToOne(targetEntity: Groupement::class,) ]
+    #[JoinColumn(name: "groupement_id", referencedColumnName: "id", nullable: true)]
+    private ?Groupement $groupement = null;
+
 
 }
