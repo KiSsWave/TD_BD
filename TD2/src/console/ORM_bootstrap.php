@@ -6,12 +6,12 @@ use Doctrine\ORM\ORMSetup;
 
 
 $entity_path = [__DIR__ . '/../core/domain/entities/'];
-$isDevMode=true;
+$isDevMode = true;
 
 $dbParams = parse_ini_file(__DIR__ . '/../../conf_td2/db.conf.ini');
 
 $config = ORMSetup::createAttributeMetadataConfiguration($entity_path, $isDevMode);
-$connection = DriverManager::getConnection($dbParams,$config);
+$connection = DriverManager::getConnection($dbParams, $config);
 try {
     $entityManager = new EntityManager($connection, $config);
 } catch (\Doctrine\ORM\Exception\MissingMappingDriverImplementation $e) {
