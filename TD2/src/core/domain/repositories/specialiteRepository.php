@@ -9,5 +9,6 @@ class specialiteRepository
     public function findByID(int $id) :Specialite{
         $sql = "SELECT id, libelle, description from Specialite WHERE id = $id";
 
+
     }
 }
