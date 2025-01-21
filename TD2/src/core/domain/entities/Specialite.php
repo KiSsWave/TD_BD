@@ -1,5 +1,5 @@
 <?php
-namespace iutnc\doktrine\core\domain\entities;
+namespace iutnc\doctrine\src\core\domain\entities;
 
 use Doctrine\DBAL\Types\Types;
 use Doctrine\ORM\Mapping\Column;
@@ -13,8 +13,8 @@ use Doctrine\ORM\Mapping\Table;
 class Specialite{
 
     #[ID]
-    #[Column(type: "uuid")]
-    #[GeneratedValue(strategy: "UUID")]
+    #[Column(type: TYPES::INTEGER)]
+    #[GeneratedValue(strategy: 'AUTO')]
     private string $id;
 
     #[Column(type: "string", length: 50)]

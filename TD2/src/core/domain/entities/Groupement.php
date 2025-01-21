@@ -1,7 +1,7 @@
 <?php
-namespace iutnc\doktrine\core\domain\entities;
+namespace iutnc\doctrine\src\core\domain\entities;
 
-use Doctrine\DBAL\Types\Types;
+use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping\Column;
 use Doctrine\ORM\Mapping\Entity;
 use Doctrine\ORM\Mapping\GeneratedValue;
@@ -10,7 +10,8 @@ use Doctrine\ORM\Mapping\JoinColumn;
 use Doctrine\ORM\Mapping\ManyToOne;
 use Doctrine\ORM\Mapping\OneToMany;
 use Doctrine\ORM\Mapping\Table;
-use Doctrine\Common\Collections\Collection;
+use iutnc\doctrine\src\core\domain\entities\Praticien;
+use iutnc\doctrine\src\core\domain\entities\Type_Groupement;
 
 #[Entity]
 #[Table(name: "groupement")]

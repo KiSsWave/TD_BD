@@ -1,5 +1,5 @@
 <?php
-namespace iutnc\doktrine\core\domain\entities;
+namespace iutnc\doctrine\src\core\domain\entities;
 
 use Doctrine\DBAL\Types\Types;
 use Doctrine\ORM\Mapping\Column;

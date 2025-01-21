@@ -7,7 +7,10 @@ networks:
 services:
   postgres:
     image: 'postgres:latest'
-    env_file: .env
+    environment:
+        POSTGRES_USER: rgc
+        POSTGRES_PASSWORD: rgc
+        POSTGRES_DB: td1
     ports:
       - "5432:5432"
     volumes:
@@ -22,6 +25,19 @@ services:
       - '8080:8080'
     networks:
       - td2.net
+
+  php:
+    build:
+      context: ../
+      dockerfile: conf_td2/Dockerfile
+    volumes:
+      - ../src:/var/www/html
+    ports:
+      - "8000:80"
+    depends_on:
+      - postgres
+
+
 
 volumes:
   postgres_data:
