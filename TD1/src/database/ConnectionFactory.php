@@ -12,7 +12,8 @@ class ConnectionFactory
     public static function makeConnection(array $conf): PDO
     {
         if (self::$pdoInstance === null) {
-            $dsn = "mysql:host={$conf['host']};port={$conf['port']};dbname={$conf['dbname']};charset=utf8";
+            $dsn = "pgsql:host= postgres ;port={$conf['port']};dbname={$conf['dbname']};";
+
             try {
                 self::$pdoInstance = new PDO(
                     $dsn,
@@ -21,7 +22,7 @@ class ConnectionFactory
                     [PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION]
                 );
             } catch (PDOException $e) {
-                throw new PDOException("Erreur de connexion : " . $e->getMessage());
+                throw new PDOException("Erreur de connexion à PostgreSQL : " . $e->getMessage());
             }
         }
         return self::$pdoInstance;

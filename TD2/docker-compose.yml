@@ -28,8 +28,8 @@ services:
 
   php:
     build:
-      context: ../
-      dockerfile: conf_td2/Dockerfile
+      context: ../..
+      dockerfile: Dockerfile
     volumes:
       - ../src:/var/www/html
     ports:
